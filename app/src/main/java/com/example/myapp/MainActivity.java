@@ -1,14 +1,21 @@
 package com.example.myapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
-
+import androidx.appcompat.app.AppCompatActivity;
+import android.widget.TextView;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 public class MainActivity extends AppCompatActivity {
-
+    @TargetApi(Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView textView=findViewById(R.id.date);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+        String currentDateandTime = sdf.format(new Date());
+        textView.setText(currentDateandTime);
     }
 }
