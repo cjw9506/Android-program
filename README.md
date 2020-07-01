@@ -1,4 +1,5 @@
 # Android_Program
+## 본 program은 현재시간과 현재위치 및 위도/경도를 나타내주는 app입니다.
 ## 개발일지
 <details>
 <summary> 개발 일지  (눌러서 내용보기) </summary>
